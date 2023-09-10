@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Etch-a-sketch</h1>
+    </header>
+    <section class="content">
+        <div class="button-section">
+            <div>
+                <input type="color" id="color-picker" value="#000000">
+            </div>
+            <button class="color-mode">Color mode</button>
+            <button class="eraser-mode">Eraser</button>
+            <button class="clear">Clear</button>
+            <div>
+                <p id="grid-size-value"></p>
+                <input type="range" id="grid-size"/>
+            </div>
+        </div>
+        <div id="container"></div>
+    </section>
+    
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

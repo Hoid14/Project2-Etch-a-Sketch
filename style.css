@@ -1,0 +1,52 @@
+body{
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+}
+h1{
+    text-align: center;
+    font-size: 100px;
+}
+.content{
+    display: flex;
+}
+.button-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 20px;
+}
+#color-picker{
+    -webkit-appearence: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    width:50px;
+    height:50px;
+    border: none;
+    cursor: pointer;
+}
+#color-picker::-webkit-color-swatch{
+    border-radius: 50%;
+}
+#container {
+    width: 600px;
+    height: 600px;
+    display: flex; /* Permite que las celdas se coloquen en una sola fila */
+    flex-wrap: wrap; /* Permite que las celdas se coloquen en varias filas */
+    
+    background-color: white;
+    
+}
+
+#grid-size{
+    -webkit-appearance: none;
+    appearance: none;
+    width:100%;
+    height: 10px;
+}
