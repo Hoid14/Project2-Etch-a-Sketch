@@ -20,7 +20,7 @@ container.onmousemove = () => {painting(defaultColor)} // 'onmousemove' se dispa
 colorPicker.onchange = (e) => {setColorPIckerValue(e)}
 colorBtn.onclick = () => {setCurrentMode("color",)}
 eraserBtn.onclick = () => {setCurrentMode("eraser")}
-clearBtn.onclick = () => {setCurrentMode("clear")}
+clearBtn.onclick = () => {clearCells()}
 
 // FUNCTIONS
 
@@ -45,6 +45,9 @@ const painting = (e) => { // Pinta la celda
     e.target.style.backgroundColor = defaultColor; // e hace referencia al evento y e.target hace referencia al elemento HTML especifico que fue objetivo del evento
 }
 
+const clearCells = () =>{
+    createGrid(parseInt(inputGridSize.value));
+}
 const setCurrentMode = (newMode) => { // Establece el modo actual
     
     if(currentMode==="color"){
@@ -52,6 +55,7 @@ const setCurrentMode = (newMode) => { // Establece el modo actual
     }
     else if(currentMode==="eraser"){
         eraserBtn.classList.remove("active");
+
     }
     
     if(newMode==="color"){
@@ -62,9 +66,7 @@ const setCurrentMode = (newMode) => { // Establece el modo actual
         eraserBtn.classList.add("active");
         defaultColor="white"
     }
-    else if(newMode==="clear"){
-        createGrid(parseInt(inputGridSize.value));
-    }
+    
     currentMode=newMode;
 
 }
